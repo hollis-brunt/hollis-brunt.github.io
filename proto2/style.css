@@ -1,0 +1,374 @@
+:root {
+  --amethyst: #9b5de5ff;
+  --brilliant-rose: #f15bb5ff;
+  --maize: #fee440ff;
+  --deep-sky-blue: #00bbf9ff;
+  --aquamarine: #00f5d4ff;
+
+  --gradient: linear-gradient(
+    90deg,
+    var(--aquamarine),
+    var(--deep-sky-blue),
+    var(--amethyst),
+    var(--brilliant-rose),
+    var(--maize),
+    var(--aquamarine)
+  );
+
+  --repeating-gradient: repeating-linear-gradient(
+    135deg,
+    var(--aquamarine),
+    var(--deep-sky-blue),
+    var(--amethyst),
+    var(--brilliant-rose),
+    var(--maize),
+    var(--brilliant-rose),
+    var(--amethyst),
+    var(--deep-sky-blue),
+    var(--aquamarine)
+  );
+
+  --white-gradient: linear-gradient(180deg, white, #ffffff00);
+
+  --font-family: "Manrope", sans-serif;
+  --font-weight: 700;
+  --subfont-weight: 600;
+  --font-size: 1.5rem;
+}
+
+body {
+  margin: 0rem;
+  padding: 0rem;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-image: var(--gradient);
+  font-weight: var(--font-weight);
+}
+
+header {
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 4rem 0rem 2rem 0rem;
+}
+
+main {
+background-color:white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2rem 6rem;
+}
+
+.header-text {
+  background-image: url("assets/HOLLIS-LOGO-COLOUR.png");
+  width: 80%;
+  height: 9rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: relative;
+  top: -4rem;
+  width: calc(100% - 2rem);
+  height: auto;
+}
+
+.hero {
+
+  width: 80%;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.hollis-character-image {
+  width: 33%;
+  max-width: 18rem;
+  margin: 0 1rem 1rem 0;
+  object-fit: contain;
+
+  flex: 0 0 auto;
+}
+
+.hero-content {
+  flex: 1 1 15rem;
+  min-width: 15rem;
+  font-weight: var(--subfont-weight);
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.partnerships {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.partnerships-label {
+  font-weight: bold;
+}
+
+.partnerships-logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.partnerships-logos-item {
+  flex: 1 1 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 8rem;
+  max-width: 18rem;
+  height: auto;
+  max-height: 6rem;
+  box-sizing: border-box;
+  padding: 0.25rem;
+}
+
+.partnerships-logos-item img {
+  width: 100%;
+  height: auto;
+  max-height: 6rem;
+  object-fit: contain;
+}
+
+/* First item is the text label, allow it to take reasonable space */
+.partnerships-logos-item:first-child {
+  flex: 1 1 12rem;
+  max-width: none;
+  min-width: 10rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+footer {
+  background-image: var(--gradient);
+  padding: 4rem 0rem;
+  padding-bottom: 0rem;
+  width: 100%;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: white;
+  background-color: black;
+  height: 3rem;
+  margin: 0px;
+  text-align: center;
+  color: white;
+  line-height: 3rem;
+}
+
+.footer-text{
+    display: inline-block;
+}
+
+a {
+  background-image: var(--gradient);
+  background-size: 100% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+a:hover {
+  background-size: 130% 130%;
+  background-position: 100% 50%;
+}
+
+@media (max-width: 1250px){
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        background-color: pink;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --font-size: 1.125rem;
+    }
+
+    body {
+
+        font-size: var(--font-size);
+    }
+
+    header {
+        padding: 2rem 0 1rem;
+        margin-top: 0.25rem;
+    }
+
+    .header-text {
+        width: 100%;
+        height: 6.5rem;
+        background-size: contain;
+    }
+
+    .hero-image {
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section.hero {
+        width: 100%;
+        padding: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hollis-character-image {
+        width: 60%;
+        max-width: 14rem;
+        margin: 0 0 1rem 0;
+        flex: 0 0 auto;
+        align-self: center;
+    }
+
+    .hero-content {
+        flex: 1 1 auto;
+        min-width: 0;
+        width: 100%;
+        font-weight: var(--subfont-weight);
+    }
+
+    .socials {
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .partnerships {
+        width: 100%;
+        
+    }
+
+    .partnerships-logos {
+        gap: 0.5rem;
+        padding: 0.5rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-direction: column;
+    }
+
+    .partnerships-logos-item {
+        flex: 0 0 auto;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .partnerships-logos-item {
+        max-width: 100%;
+    }
+
+    footer {
+        padding: 2rem 0 0 0;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+        line-height: 2rem;
+        height: auto;
+
+    }
+
+    a {
+        background-size: 140% 140%;
+    }
+}
+
+@media (max-width: 550px) {
+    :root {
+        --font-size: 1rem;
+    }
+
+    body {
+        font-size: var(--font-size);
+    }
+
+    header {
+        font-size: 0.9rem;
+        padding: 1.5rem 0 0rem 0;
+    }
+
+    .header-text {
+        height: 5.5rem;
+        padding-top: 0;        
+    }
+
+    .hollis-character-image {
+        width: 80%;
+        max-width: 12rem;
+        display: none;
+    }
+
+    .partnerships-logos {
+        gap: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .partnerships-logos-item {
+        max-width: 100%;
+    }
+
+    a {
+        background-size: 150% 150%;
+    }
+
+    .footer-text{
+        width: 100%;
+    }
+
+    footer {
+        padding-bottom: 0;
+    }
+
+    /* reduce motion for small devices where useful */
+    @media (prefers-reduced-motion: reduce) {
+        a {
+            transition: none;
+        }
+    }
+}
