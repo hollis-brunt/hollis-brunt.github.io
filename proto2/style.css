@@ -123,6 +123,15 @@ background-color:white;
   gap: 2rem;
 }
 
+.socials a {
+  font-size: calc(var(--font-size) * 3);
+  transition: transform 0.6s ease;
+}
+
+.socials a:hover {
+  transform: rotate(5deg);
+}
+
 .partnerships {
   display: flex;
   flex-direction: column;
