@@ -33,7 +33,7 @@
   --font-family: "Manrope", sans-serif;
   --font-weight: 700;
   --subfont-weight: 600;
-  --font-size: 1.5rem;
+  --font-size: 1.3rem;
 }
 
 body {
@@ -50,6 +50,7 @@ body {
   font-size: var(--font-size);
   background-image: var(--gradient);
   font-weight: var(--font-weight);
+  overflow-x: hidden;
 }
 
 header {
@@ -92,6 +93,7 @@ background-color:white;
 .hero {
 
   width: 80%;
+  max-width: 1000px;
   padding: 2rem;
   box-sizing: border-box;
 
@@ -138,10 +140,13 @@ background-color:white;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
-  gap: 1rem;
+  justify-content: center;
+  max-width: 100%;
+  gap: .25rem;
   box-sizing: border-box;
-  padding: 1rem;
+  background-color:pink;
+
+
 }
 
 .partnerships-logos-item {
@@ -149,29 +154,24 @@ background-color:white;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 8rem;
-  max-width: 18rem;
+  max-width: calc(100% / 3 - 2rem);
   height: auto;
   max-height: 6rem;
   box-sizing: border-box;
   padding: 0.25rem;
+    border: 1px solid #ccc;
 }
 
 .partnerships-logos-item img {
-  width: 100%;
-  height: auto;
-  max-height: 6rem;
+  width: auto;
+  height: 6rem;
   object-fit: contain;
+  align-self: center;
+  display: block;
 }
 
 /* First item is the text label, allow it to take reasonable space */
-.partnerships-logos-item:first-child {
-  flex: 1 1 12rem;
-  max-width: none;
-  min-width: 10rem;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
+
 
 footer {
   background-image: var(--gradient);
@@ -211,14 +211,14 @@ a:hover {
   background-position: 100% 50%;
 }
 
-@media (max-width: 1250px){
+@media (max-width: 1000px){
     .hero {
         width: 100%;
         max-width: 100%;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
     :root {
         --font-size: 1.125rem;
     }
@@ -291,14 +291,11 @@ a:hover {
         flex-direction: column;
     }
 
+    
     .partnerships-logos-item {
         flex: 0 0 auto;
         width: 100%;
         height: auto;
-        max-width: 100%;
-    }
-
-    .partnerships-logos-item {
         max-width: 100%;
     }
 
@@ -343,14 +340,7 @@ a:hover {
         display: none;
     }
 
-    .partnerships-logos {
-        gap: 0.5rem;
-        padding-left: 0.5rem;
-    }
 
-    .partnerships-logos-item {
-        max-width: 100%;
-    }
 
     a {
         background-size: 150% 150%;
