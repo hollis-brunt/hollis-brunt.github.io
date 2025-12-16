@@ -108,7 +108,7 @@ background-color:white;
   align-items: flex-start;
 
   position: relative;
-  top: -3rem;
+  top: -1.5rem;
 }
 
 .hollis-character-image {
@@ -135,6 +135,10 @@ background-color:white;
   max-width: 100%;
 
   border: black 4px solid;
+}
+
+.hollis-character-image-3{
+  display: none;
 }
 
 .character-container{
@@ -204,10 +208,12 @@ background-color:white;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   max-width: 100%;
   gap: .25rem;
   box-sizing: border-box;
+  border: dashed black 2px;
+  padding: 0px;
 }
 
 .partnerships-logos-item {
@@ -215,11 +221,14 @@ background-color:white;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: calc(100% / 3 - 2rem);
+
   height: auto;
   max-height: 6rem;
   box-sizing: border-box;
   padding: 0.25rem;
+  border: black 1px solid;
+  margin: 0px;
+
 }
 
 .partnerships-logos-item img {
@@ -401,9 +410,21 @@ footer a{
     }
 
     .hollis-character-image {
-        width: 80%;
+        width: 25%;
         max-width: 12rem;
-        display: none;
+        display:none;
+    }
+
+    .hollis-character-image-3{
+      display: block;
+      float:left;
+      width: 25%;
+      max-width: 12rem;
+      margin: 0 1rem 1rem 0;
+    }
+
+    h3{
+      font-size: 1.1rem;
     }
 
     .character-container{
