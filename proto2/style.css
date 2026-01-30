@@ -170,7 +170,7 @@ main {
   text-decoration: none;
 }
 
-.socials a i {
+.socials a i, .socials a .fa-brands {
   font-size: 3rem;
 }
 
