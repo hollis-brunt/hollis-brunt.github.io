@@ -156,10 +156,22 @@ main {
   flex-direction: row;
   gap: 2rem;
   padding-top: 1rem;
+  align-items: center;
+}
+
+.socials a:link, .socials a:visited {
+  color: black;
 }
 
 .socials a {
   transition: transform 0.6s ease;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+.socials a i {
+  font-size: 3rem;
 }
 
 .socials a:hover {
@@ -172,7 +184,7 @@ main {
 
 .black-button {
   background-color: black;
-  color: white;
+  color: white !important;
   padding: 0.7rem 4rem;
   text-decoration: none;
   border-radius: 9999px;
