@@ -33,7 +33,7 @@
   --font-family: "Manrope", sans-serif;
   --font-weight: 700;
   --subfont-weight: 600;
-  --font-size: 1.3rem;
+  --font-size: 1.7rem;
 }
 
 body {
@@ -57,12 +57,12 @@ header {
   background-color: white;
   width: 100%;
   text-align: center;
-  margin-top: 0.5rem;
-  padding: 1rem 0rem 0rem 0rem;
+  margin-top: 1rem;
+  padding: 3rem 0rem 1rem 0rem;
 }
 
 main {
-background-color:white;
+  background-color: white;
   width: 100%;
   display: flex;
   gap: 0rem;
@@ -87,65 +87,40 @@ background-color:white;
 
 .hero-image {
   position: relative;
-  top: -4rem;
+  top: -5rem;
   width: calc(100% - 2rem);
-  max-width: 1000px;
+  max-width: 1400px;
   height: auto;
   padding: 0;
   margin: 0;
 }
 
 .hero {
-
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
-  padding: 2rem;
-  padding-top: 0rem;
+  padding: 0rem;
+  padding-top: 3rem;
   box-sizing: border-box;
-
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-
+  flex-direction: column;
   position: relative;
   top: -1.5rem;
 }
 
 .hollis-character-image {
-  width: 33%;
-  max-width: 18rem;
-  margin: 0 1rem 1rem 0;
+  height: 100%;
+  max-width: 19rem;
+  margin: 0 3rem 1rem 0;
   object-fit: contain;
-
   flex: 0 0 auto;
-
-  float:left;
+  float: left;
 }
 
-.hollis-character-image-2{
-  box-sizing: border-box;
-  padding-top: .5rem;
-  padding-right: .5rem;
-  padding-left: .5rem;
-
-  object-fit: cover;
-  object-position: center top;
-  width: 400px;
-  aspect-ratio: 1/1;
-  max-width: 100%;
-
-  border: black 4px solid;
-}
-
-.hollis-character-image-3{
-  display: none;
-}
-
-.character-container{
+.character-container {
   margin-right: 2rem;
   margin-bottom: 1rem;
-
-
   max-width: 33%;
   width: 400px;
   padding: 1rem;
@@ -153,17 +128,17 @@ background-color:white;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   transform: rotate(-2deg);
-
-    float: left;
-    display: block;
-
+  float: left;
+  display: block;
   height: fit-content;
 }
 
-.character-container:hover{
+.character-container:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
   transform: rotate(0deg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .hero-content {
@@ -180,15 +155,34 @@ background-color:white;
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  padding-top: 1rem;
 }
 
 .socials a {
-  font-size: calc(var(--font-size) * 3);
   transition: transform 0.6s ease;
 }
 
 .socials a:hover {
-  transform: rotate(5deg);
+  transform: scale(0.98);
+}
+
+.socials a:active {
+  transform: scale(0.96);
+}
+
+.black-button {
+  background-color: black;
+  color: white;
+  padding: 0.7rem 4rem;
+  text-decoration: none;
+  border-radius: 9999px;
+  font-weight: var(--subfont-weight);
+  display: inline-block;
+  transition:
+    background-color 0.1s ease,
+    color 0.1s ease;
+  background-image: none;
+  font-weight: 800;
 }
 
 .partnerships {
@@ -196,7 +190,16 @@ background-color:white;
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 5rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center ;
+}
+
+.partnerships h3 {
+  margin: 0px;
+  font-size: 2.8rem;
+  font-weight: 600;
 }
 
 .partnerships-label {
@@ -208,43 +211,34 @@ background-color:white;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  max-width: 100%;
-  gap: .25rem;
+  justify-content: center;
+  width: 100%;
   box-sizing: border-box;
-
   padding: 0px;
+  gap: 5rem;
 }
 
 .partnerships-logos-item {
-  flex: 1 1 12rem;
   display: flex;
   align-items: center;
   justify-content: center;
-
   height: auto;
-  max-height: 6rem;
+  max-height: 8rem;
   box-sizing: border-box;
-  padding: 0.25rem;
-
   margin: 0px;
-
 }
 
 .partnerships-logos-item img {
   width: auto;
-  height: 6rem;
+  height: 8rem;
   object-fit: contain;
   align-self: center;
   display: block;
 }
 
-/* First item is the text label, allow it to take reasonable space */
-
-
 footer {
   background-image: var(--gradient);
-  padding: 3rem 0rem;
+  padding: 3.5rem 0rem;
   padding-bottom: 0rem;
   width: 100%;
 }
@@ -256,15 +250,15 @@ footer p {
   height: 3rem;
   margin: 0px;
   text-align: center;
-  color: white;
   line-height: 3rem;
 }
 
-.footer-text{
-    display: inline-block;
+.footer-text {
+  display: inline-block;
+  background-color: black;
 }
 
-a {
+footer a {
   background-image: var(--gradient);
   background-size: 100% 100%;
   background-position: 0% 50%;
@@ -275,178 +269,128 @@ a {
   display: inline-block;
 }
 
-a:hover {
+footer a:hover {
   background-size: 130% 130%;
   background-position: 100% 50%;
 }
+@media (max-width: 1100px) {
+  .hero-image {
+    width: 100%;
+    max-width: none;
+    top: -3rem; /* Adjusted for mobile */
+  }
 
-footer a{
+  .hollis-character-image {
+    display: none; /* Hide on mobile */
+  }
 
+  .character-container {
+    max-width: 100%; /* Allow full width on mobile */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .partnerships-logos {
+    flex-direction: row; /* Keep horizontal layout */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+
+  .partnerships-logos-item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+  }
+  .partnerships-logos-item img {
+    height: 7rem; /* Slightly smaller logos on smaller screens */
+  }
+  .socials {
+    justify-content: center; /* Center social icons on smaller screens */
+  }
 }
 
-@media (max-width: 1000px){
-    .hero {
-        width: 100%;
+@media (max-width: 900px) {
+  body{
+    font-size: 1.4rem; /* Smaller font size on mobile */
+  }
 
-    }
+  .black-button {
+    padding: 0.5rem 3rem; /* Smaller button padding on mobile */
+    font-size: 1.4rem; /* Smaller button font size on mobile */
+  }
+
+  .partnerships {
+    padding: 0px;
+  }
+
+  .partnerships h3 {
+    font-size: 2.2rem; /* Smaller heading on mobile */
+  }
+
+  .partnerships-logos {
+    gap: 2rem; /* Reduced gap on mobile */
+  }
+
+  .partnerships-logos-item img {
+    height: 6rem; /* Slightly smaller logos on mobile */
+  }
 }
 
-@media (max-width: 850px) {
-    :root {
-        --font-size: 1.125rem;
-    }
+@media (max-width: 715px) {
+  body{
+    font-size: 1.2rem; /* Even smaller font size on small mobile */
+  }
 
-    body {
+  main{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
-        font-size: var(--font-size);
-    }
+  .black-button {
+    padding: 0.6rem 2.2rem; /* Even smaller button padding on small mobile */
+    font-size: 1.6rem; /* Even smaller button font size on small mobile */
+  }
 
-    header {
-        padding: 1rem 0 1rem 0;
-        margin-top: .25rem;
-    }
+  .partnerships h3 {
+    font-size: 1.8rem; /* Even smaller heading on small mobile */
+  }
 
-    .header-text {
-        width: 100%;
-        max-width: 850px;
-        height: 6.5rem;
-        background-size: contain;
-    }
+  .partnerships-logos {
+    gap: 1.5rem; /* Further reduced gap on small mobile */
+  }
 
-    .hero-image {
-        width: 100%;
-        height: auto;
-    }
-
-    main {
-        padding: 0 1rem;
-    }
-
-    section.hero {
-        width: 100%;
-        padding: 1rem 0;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .hollis-character-image {
-        width: 60%;
-        max-width: 14rem;
-        margin: 0 0 1rem 0;
-        flex: 0 0 auto;
-        align-self: center;
-        
-    }
-
-    .hero-content {
-        flex: 1 1 auto;
-        min-width: 0;
-        width: 100%;
-        font-weight: var(--subfont-weight);
-    }
-
-    .socials {
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .partnerships {
-        width: 100%;
-        
-    }
-
-    .partnerships-logos {
-        gap: 0.5rem;
-        padding: 0.5rem;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        flex-direction: column;
-    }
-
-    
-    .partnerships-logos-item {
-        flex: 0 0 auto;
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        
-    }
-
-    footer {
-        padding: 2rem 0 0 0;
-    }
-
-    footer p {
-        font-size: 0.85rem;
-        line-height: 2rem;
-        height: auto;
-
-    }
-
-    a {
-        background-size: 140% 140%;
-    }
+  .partnerships-logos-item img {
+    height: 5rem; /* Even smaller logos on small mobile */
+  }
 }
 
-@media (max-width: 550px) {
-    :root {
-        --font-size: 1rem;
-    }
+@media (max-width: 500px) {
+  body{
+    font-size: 1rem; /* Further smaller font size on very small mobile */
+  }
 
-    body {
-        font-size: var(--font-size);
-    }
+  .black-button {
+    padding: 0.3rem 1.5rem; /* Further smaller button padding on very small mobile */
+    font-size: 1rem; /* Further smaller button font size on very small mobile */
+  }
 
-    header {
-        font-size: 0.9rem;
-        padding: 1.5rem 0 0rem 0;
-    }
+  .partnerships h3 {
+    font-size: 1.5rem; /* Further smaller heading on very small mobile */
+  }
+  
+  .partnerships {
+    margin-top: 1rem;
+  }
 
-    .header-text {
-        height: 5.5rem;
-        padding-top: 0;        
-    }
+  .partnerships-logos{
+    flex-direction: column;
+  }
 
-    .hollis-character-image {
-        width: 25%;
-        max-width: 12rem;
-        display:none;
-    }
+  footer p {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.75rem;
+    padding: .5rem 0rem .5rem 0rem;
+    padding-bottom: 2.5rem !important; 
+  }
 
-    .hollis-character-image-3{
-      display: block;
-      float:left;
-      width: 25%;
-      max-width: 12rem;
-      margin: 0 1rem 1rem 0;
-    }
-
-    h3{
-      font-size: 1.1rem;
-    }
-
-    .character-container{
-      display: none;
-    }
-
-    a {
-        background-size: 150% 150%;
-    }
-
-    .footer-text{
-        width: 100%;
-    }
-
-    footer {
-        padding-bottom: 0;
-    }
-
-    /* reduce motion for small devices where useful */
-    @media (prefers-reduced-motion: reduce) {
-        a {
-            transition: none;
-        }
-    }
+  .dashes {
+    display: none;
+  }
 }
