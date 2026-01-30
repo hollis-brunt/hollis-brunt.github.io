@@ -1,10 +1,15 @@
+/* ==========================================================================
+  ROOT VARIABLES
+  ========================================================================== */
 :root {
+  /* Colors */
   --amethyst: #9b5de5ff;
   --brilliant-rose: #f15bb5ff;
   --maize: #fee440ff;
   --deep-sky-blue: #00bbf9ff;
   --aquamarine: #00f5d4ff;
 
+  /* Gradients */
   --gradient: linear-gradient(
     90deg,
     var(--aquamarine),
@@ -30,46 +35,45 @@
 
   --white-gradient: linear-gradient(180deg, white, #ffffff00);
 
+  /* Typography */
   --font-family: "Manrope", sans-serif;
   --font-weight: 700;
   --subfont-weight: 600;
   --font-size: 1.7rem;
 }
 
+/* ==========================================================================
+  BASE STYLES
+  ========================================================================== */
 body {
   margin: 0rem;
   padding: 0rem;
   width: 100vw;
   min-height: 100vh;
   background-color: white;
+  background-image: var(--gradient);
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   font-family: var(--font-family);
   font-size: var(--font-size);
-  background-image: var(--gradient);
+  
   font-weight: var(--font-weight);
   overflow-x: hidden;
+
 }
 
+/* ==========================================================================
+  HEADER
+  ========================================================================== */
 header {
   background-color: white;
   width: 100%;
   text-align: center;
   margin-top: 1rem;
   padding: 3rem 0rem 1rem 0rem;
-}
 
-main {
-  background-color: white;
-  width: 100%;
-  display: flex;
-  gap: 0rem;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 0rem 6rem 2rem 6rem;
 }
 
 .header-text {
@@ -85,6 +89,23 @@ main {
   aspect-ratio: 6.5 / 1;
 }
 
+/* ==========================================================================
+  MAIN CONTENT
+  ========================================================================== */
+main {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  gap: 0rem;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0rem 6rem 2rem 6rem;
+}
+
+/* ==========================================================================
+  HERO SECTION
+  ========================================================================== */
 .hero-image {
   position: relative;
   top: -5rem;
@@ -109,6 +130,19 @@ main {
   top: -1.5rem;
 }
 
+.hero-content {
+  flex: 1 1 15rem;
+  min-width: 15rem;
+  font-weight: var(--subfont-weight);
+}
+
+.hero-content:first-child p {
+  margin-top: 0rem;
+}
+
+/* ==========================================================================
+  CHARACTER SECTION
+  ========================================================================== */
 .hollis-character-image {
   height: 100%;
   max-width: 19rem;
@@ -141,16 +175,9 @@ main {
     box-shadow 0.3s ease;
 }
 
-.hero-content {
-  flex: 1 1 15rem;
-  min-width: 15rem;
-  font-weight: var(--subfont-weight);
-}
-
-.hero-content:first-child p {
-  margin-top: 0rem;
-}
-
+/* ==========================================================================
+  SOCIAL LINKS
+  ========================================================================== */
 .socials {
   display: flex;
   flex-direction: row;
@@ -159,7 +186,8 @@ main {
   align-items: center;
 }
 
-.socials a:link, .socials a:visited {
+.socials a:link,
+.socials a:visited {
   color: black;
 }
 
@@ -170,8 +198,9 @@ main {
   text-decoration: none;
 }
 
-.socials a i, .socials a .fa-brands {
-  font-size: 3rem;
+.socials a i,
+.socials a .fa-brands {
+  font-size: 3.5rem;
 }
 
 .socials a:hover {
@@ -182,21 +211,27 @@ main {
   transform: scale(0.96);
 }
 
+/* ==========================================================================
+  BUTTONS
+  ========================================================================== */
 .black-button {
   background-color: black;
+  background-image: none;
   color: white !important;
   padding: 0.7rem 4rem;
   text-decoration: none;
   border-radius: 9999px;
-  font-weight: var(--subfont-weight);
+  font-weight: 800;
   display: inline-block;
   transition:
     background-color 0.1s ease,
     color 0.1s ease;
-  background-image: none;
-  font-weight: 800;
+
 }
 
+/* ==========================================================================
+  PARTNERSHIPS SECTION
+  ========================================================================== */
 .partnerships {
   display: flex;
   flex-direction: column;
@@ -205,7 +240,7 @@ main {
   margin-top: 5rem;
   text-align: center;
   align-items: center;
-  justify-content: center ;
+  justify-content: center;
 }
 
 .partnerships h3 {
@@ -248,6 +283,9 @@ main {
   display: block;
 }
 
+/* ==========================================================================
+  FOOTER
+  ========================================================================== */
 footer {
   background-image: var(--gradient);
   padding: 3.5rem 0rem;
@@ -285,46 +323,60 @@ footer a:hover {
   background-size: 130% 130%;
   background-position: 100% 50%;
 }
+
+/* ==========================================================================
+  MEDIA QUERIES
+  ========================================================================== */
+
+/* Large Tablets and Below (max-width: 1100px) */
 @media (max-width: 1100px) {
   .hero-image {
     width: 100%;
     max-width: none;
-    top: -3rem; /* Adjusted for mobile */
+    top: -3rem;
   }
 
   .hollis-character-image {
-    display: none; /* Hide on mobile */
+    display: none;
   }
 
   .character-container {
-    max-width: 100%; /* Allow full width on mobile */
-    margin-right: 0; /* Remove right margin */
+    max-width: 100%;
+    margin-right: 0;
   }
 
   .partnerships-logos {
-    flex-direction: row; /* Keep horizontal layout */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    flex-direction: row;
+    overflow-x: auto;
   }
 
   .partnerships-logos-item {
-    flex: 0 0 auto; /* Prevent items from shrinking */
+    flex: 0 0 auto;
   }
+
   .partnerships-logos-item img {
-    height: 7rem; /* Slightly smaller logos on smaller screens */
+    height: 7rem;
   }
+
   .socials {
-    justify-content: center; /* Center social icons on smaller screens */
+    justify-content: center;
   }
 }
 
+/* Tablets (max-width: 900px) */
 @media (max-width: 900px) {
-  body{
-    font-size: 1.4rem; /* Smaller font size on mobile */
+  body {
+    font-size: 1.4rem;
+  }
+
+  .socials a i,
+  .socials a .fa-brands {
+    font-size: 3rem;
   }
 
   .black-button {
-    padding: 0.5rem 3rem; /* Smaller button padding on mobile */
-    font-size: 1.4rem; /* Smaller button font size on mobile */
+    padding: 0.5rem 3rem;
+    font-size: 1.4rem;
   }
 
   .partnerships {
@@ -332,65 +384,77 @@ footer a:hover {
   }
 
   .partnerships h3 {
-    font-size: 2.2rem; /* Smaller heading on mobile */
+    font-size: 2.2rem;
   }
 
   .partnerships-logos {
-    gap: 2rem; /* Reduced gap on mobile */
+    gap: 2rem;
   }
 
   .partnerships-logos-item img {
-    height: 6rem; /* Slightly smaller logos on mobile */
+    height: 6rem;
   }
 }
 
+/* Small Tablets / Large Mobile (max-width: 715px) */
 @media (max-width: 715px) {
-  body{
-    font-size: 1.2rem; /* Even smaller font size on small mobile */
+  body {
+    font-size: 1.2rem;
   }
 
-  main{
+  main {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
+  .socials a i,
+  .socials a .fa-brands {
+    font-size: 2.5rem;
+  }
+
   .black-button {
-    padding: 0.6rem 2.2rem; /* Even smaller button padding on small mobile */
-    font-size: 1.6rem; /* Even smaller button font size on small mobile */
+    padding: 0.6rem 2.2rem;
+    font-size: 1.6rem;
   }
 
   .partnerships h3 {
-    font-size: 1.8rem; /* Even smaller heading on small mobile */
+    font-size: 1.8rem;
   }
 
   .partnerships-logos {
-    gap: 1.5rem; /* Further reduced gap on small mobile */
+    gap: 1.5rem;
   }
 
   .partnerships-logos-item img {
-    height: 5rem; /* Even smaller logos on small mobile */
+    height: 5rem;
   }
 }
 
+/* Mobile (max-width: 500px) */
 @media (max-width: 500px) {
-  body{
-    font-size: 1rem; /* Further smaller font size on very small mobile */
+  body {
+    font-size: 1rem;
+  }
+
+  .socials a i,
+  .socials a .fa-brands {
+    font-size: 2rem;
   }
 
   .black-button {
-    padding: 0.3rem 1.5rem; /* Further smaller button padding on very small mobile */
-    font-size: 1rem; /* Further smaller button font size on very small mobile */
+    padding: 0.3rem 1.5rem;
+    font-size: 1rem;
   }
 
-  .partnerships h3 {
-    font-size: 1.5rem; /* Further smaller heading on very small mobile */
-  }
-  
   .partnerships {
     margin-top: 1rem;
   }
 
-  .partnerships-logos{
+  .partnerships h3 {
+    font-size: 1.5rem;
+  }
+
+  .partnerships-logos {
     flex-direction: column;
   }
 
@@ -398,8 +462,8 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     line-height: 1.75rem;
-    padding: .5rem 0rem .5rem 0rem;
-    padding-bottom: 2.5rem !important; 
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    padding-bottom: 2.5rem !important;
   }
 
   .dashes {
