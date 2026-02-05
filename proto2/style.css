@@ -361,6 +361,10 @@ footer a:hover {
   .socials {
     justify-content: center;
   }
+
+  .partnerships{
+    margin-top: 1.5rem;
+  }
 }
 
 /* Tablets (max-width: 900px) */
@@ -380,6 +384,7 @@ footer a:hover {
   }
 
   .partnerships {
+    margin-top: 2.5rem;
     padding: 0px;
   }
 
@@ -447,7 +452,7 @@ footer a:hover {
   }
 
   .partnerships {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
   }
 
   .partnerships h3 {
@@ -468,5 +473,13 @@ footer a:hover {
 
   .dashes {
     display: none;
+  }
+
+  header {
+    container-type: inline-size;
+  }
+
+  header span {
+    font-size: clamp(.5rem, 3.5cqi, 2rem);
   }
 }
