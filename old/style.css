@@ -1,0 +1,60 @@
+:root{
+    --primary-color: #3498db;
+    --secondary-color: #d94865;
+    --accent-color: #44515db9;
+    --background-color: #ecf0f1;
+    --text-shadow: #2c3e50;
+    --text-shadow-dark: #202c39;
+    --text-color: #FFFFFF;
+    --font-family: 'Nunito Sans', 'Arial', sans-serif;
+    --font-weight: 400;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(circle, var(--background-color) 50%, var(--accent-color) 100%);
+}
+
+h1,h2,h3{
+    display: block;
+    text-align: center;
+    padding: 0px;
+    margin: 7px;
+}
+
+h1{
+    font-size: 11vw;
+    text-shadow:    var(--text-shadow-dark) 0px 0px 3px, 
+                    var(--text-shadow) 0px -3px 3px;
+    font-weight:    var(--font-weight);
+}
+
+h2{
+    font-size: 5vw;
+    text-shadow:    var(--text-shadow) 0px 0px 2px, 
+                    var(--text-shadow) 0px -2px 2px;
+}
+
+h3{
+    font-size: 5vw;
+}
+
+a:link, a:visited{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover, a:active{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
